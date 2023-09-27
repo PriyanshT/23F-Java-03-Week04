@@ -18,6 +18,9 @@ public class StringController implements Initializable {
     @FXML
     private Label noSpaceLabel;
 
+    @FXML
+    private Label formattedLabel;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("I am in the controller - initialize method.");
@@ -60,6 +63,14 @@ public class StringController implements Initializable {
             // remove the space/expressions, so that it can be used to store it in database or anywhere else
             String noSpacePhoneNum = phoneNum.replaceAll("[-\\s\\(\\).]", ""); // 7052413456
             noSpaceLabel.setText(noSpacePhoneNum);
+
+            // format the string so that user can see it properly
+            if(noSpacePhoneNum.length() == 10){
+                String areaCode = noSpacePhoneNum.substring(0, 3);
+                String secondPart = noSpacePhoneNum.substring(3, 6);
+                String lastPart = noSpacePhoneNum.substring(6);
+                formattedLabel.setText(String.format("(%s) %s-%s", areaCode, secondPart, lastPart)); // (705) 241-3456
+            }
         }));
     }
 }

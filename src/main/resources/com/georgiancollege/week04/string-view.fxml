@@ -19,6 +19,7 @@
             </HBox>
             <Label fx:id="resultLabel" text="Label" />
             <Label fx:id="noSpaceLabel" text="Label" />
+            <Label fx:id="formattedLabel" text="Label" />
          </children>
       </VBox>
    </children>
