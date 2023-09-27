@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.georgiancollege.week04.StringController">
+   <children>
+      <VBox alignment="CENTER" layoutX="193.0" layoutY="135.0" prefHeight="400.0" prefWidth="600.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="298.0" spacing="30.0">
+               <children>
+                  <Label text="Enter Phone Number" />
+                  <TextField fx:id="phoneNumberTextField" />
+               </children>
+            </HBox>
+            <Label fx:id="resultLabel" text="Label" />
+            <Label fx:id="noSpaceLabel" text="Label" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
